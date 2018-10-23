@@ -417,8 +417,8 @@ open class AMTooltipView: UIView {
         
         
         //check popup in window frame
-            let padding = (options.textWidth + padding*2)/2
-            let spaceFromLeftSide = cutOutViewX.constant + cutOutViewWidth.constant/2 - padding
+            let spacePadding = (options.textWidth + padding*2)/2
+            let spaceFromLeftSide = cutOutViewX.constant + cutOutViewWidth.constant/2 - spacePadding
             
             if spaceFromLeftSide < 0{
                 
@@ -430,7 +430,7 @@ open class AMTooltipView: UIView {
                 }
             }
             
-            let spaceFromRightSide = cutOutViewX.constant + cutOutViewWidth.constant/2 + padding
+            let spaceFromRightSide = cutOutViewX.constant + cutOutViewWidth.constant/2 + spacePadding
             
             if spaceFromRightSide > targetView.frame.size.width{
                 
